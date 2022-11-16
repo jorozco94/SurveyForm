@@ -16,39 +16,49 @@
   <main>
     <form id="survey-form">
       <fieldset class="identification">
-        <label for="name" id="name-label">Name:<input id="name" required type="text" placeholder="Enter your full name"></label>
-        <label for="email" id="email-label">Email:<input id="email" required type="email" placeholder="Enter your email"></label>
-        <label for="number" id="number-label">Age:<input id="number" type="number" placeholder="Enter your age"></label>
+        <label for="name" id="name-label">Name:</label>
+        <input id="name" required type="text" placeholder="Enter your full name">
+        <label for="email" id="email-label">Email:</label>
+        <input id="email" required type="email" placeholder="Enter your email">
+        <label for="number" id="number-label">Age:</label>
+        <input id="number" type="number" placeholder="Enter your age">
       </fieldset>
       <fieldset class="frequency">
         <p>How often do you use FCC?</p>
-        <label><input value="daily" type="radio" name="visiting-frequency">Daily</label>
-        <label><input value="weekly" type="radio" name="visiting-frequency">Weekly</label>
-        <label><input value="monthly" type="radio" name="visiting-frequency">Monthly</label>
+        <label>
+        <input class="inline" value="daily" type="radio" name="visiting-frequency">Daily
+        </label>
+        <label>
+          <input class="inline" value="weekly" type="radio" name="visiting-frequency">Weekly
+        </label>
+        <label>
+          <input class="inline" value="monthly" type="radio" name="visiting-frequency">Monthly
+        </label>
       </fieldset>
       <fieldset class="role">
         <label for="profession">Which option best describes your current role?
-          <select id="profession" name="profession">
-            <option>(select one)</option>
-            <option>Student</option>
-            <option>Professional</option>
-            <option>Other</option>
-          </select>
+          
         </label>
+        <select id="profession" name="profession">
+          <option>(select one)</option>
+          <option>Student</option>
+          <option>Professional</option>
+          <option>Other</option>
+        </select>
       </fieldset>
       <fieldset class="favorites">
-        <label>What aspects of FCC do you enjoy? (Mark all that apply)
-          <input type="checkbox">Educational Videos
-          <input type="checkbox">Community Forums
-          <input type="checkbox">Certification Courses
-          <input type="checkbox">FCC Radio
-          <input type="checkbox">Educational Articles
-        </label>
+        <p>What aspects of FCC do you enjoy? (Mark all that apply)
+          <label><input class="inline" type="checkbox">Educational Videos</label>
+          <label><input class="inline" type="checkbox">Community Forums</label>
+          <label><input class="inline" type="checkbox">Certification Courses</label>
+          <label><input class="inline" type="checkbox">FCC Radio</label>
+          <label><input class="inline" type="checkbox">Educational Articles</label>
+        </p>
       </fieldset>
       <fieldset class="feedback">
         <label for="comments">Please provide any other feedback you have for FCC below:
-          <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
         </label>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
       </fieldset>
       <input type="submit" value="Submit">
     </form>
