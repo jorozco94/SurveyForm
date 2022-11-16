@@ -5,25 +5,52 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+  --body-width: 100%;
+  --body-height: 100vh;
+  --main-content-width: 50vw;
+  --main-content-width-max: 500px;
+  --main-content-width-min: 300px;
+  --text-entry-height: 2em;
+  
+  --default-margin: 10px; 
+  --default-border-rad: 8px;
+
+  --bg-color: #1b1b32;
+  --font-color: #f5f6f7;
+  --separator-color: #3b3b3f;
+  --input-textarea-color: #2f2f62;
+  --input-txt-color: #fff;
+
+}
+
 body {
-  width: 100%;
-  height: 100vh;
-  background-color: #1b1b32;
-  /* color: #f5f6f7; */
+  width: var(--body-width);
+  height: var(--body-height);
+  background-color: var(--bg-color);
+  color: var(--font-color);
 }
 
 header, main, footer {
   margin: 0 auto;
   text-align: center;
-  width: 50vw;
-  max-width: 500px;
-  min-width: 300px;
+  width: var(--main-content-width);
+  max-width: var(--main-content-width-max);
+  min-width: var(--main-content-width-min);
+}
+
+header {
+  margin-top: var(--default-margin);
+}
+
+footer {
+  padding: var(--default-margin);
 }
 
 fieldset {
   border: none;
   padding: 2rem 0;
-  border-bottom: 3px solid #3b3b4f;
+  border-bottom: 3px solid var(--separator-color);
 }
 
 fieldset:last-of-type {
@@ -34,21 +61,21 @@ label {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 10px 0;
+  margin: var(--default-margin) 0;
 }
 
 input,
 textarea,
 select {
-  margin: 10px 0 0 0;
-  width: 100%;
-  min-height: 2em;
+  margin: var(--default-margin) 0;
+  width: var(--body-width);
+  min-height: var(--text-entry-height);
 }
 
 input, textarea {
-  background-color: #0a0a23;
-  border: 1px solid #0a0a23;
-  color: #ffffff;
+  background-color: var(--input-textarea-color);
+  border: 1px solid var(--input-textarea-color);
+  color: var(--input-txt-color);
 }
 
 .inline {
@@ -57,13 +84,8 @@ input, textarea {
 }
 
 input[type="submit"] {
-  display: block;
-  width: 60%;
-  margin: 1em auto;
-  height: 2em;
-  font-size: 1.1rem;
-  background-color: #3b3b4f;
-  border-color: white;
-  min-width: 300px;
+  border-radius: var(--default-border-rad);
+  margin: var(--default-margin) 0;
+  font-weight: bold;
 }
 
