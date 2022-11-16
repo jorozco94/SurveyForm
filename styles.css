@@ -12,9 +12,12 @@
   --main-content-width-max: 500px;
   --main-content-width-min: 300px;
   --text-entry-height: 2em;
-  
+  --separator-thickness: 3px;
   --default-margin: 10px; 
   --default-border-rad: 8px;
+  --text-area-padding: 2px;
+  --fieldset-padding: 2rem;
+  --inline-top-margin: .5em;
 
   --bg-color: #1b1b32;
   --font-color: #f5f6f7;
@@ -49,8 +52,8 @@ footer {
 
 fieldset {
   border: none;
-  padding: 2rem 0;
-  border-bottom: 3px solid var(--separator-color);
+  padding: var(--fieldset-padding) 0;
+  border-bottom: var(--separator-thickness) solid var(--separator-color);
 }
 
 fieldset:last-of-type {
@@ -76,11 +79,12 @@ input, textarea {
   background-color: var(--input-textarea-color);
   border: 1px solid var(--input-textarea-color);
   color: var(--input-txt-color);
+  padding: var(--text-area-padding);
 }
 
 .inline {
   width: unset;
-  margin: 0 0.5em 0 0;
+  margin: 0 var(--inline-top-margin) 0 0;
 }
 
 input[type="submit"] {
