@@ -42,14 +42,13 @@ header, main, footer {
   min-width: var(--main-content-width-min);
 }
 
+/* HEADER */
+
 header {
   margin-top: var(--default-margin);
 }
 
-footer {
-  padding: var(--default-margin);
-}
-
+/* FORM */
 fieldset {
   border: none;
   padding: var(--fieldset-padding) 0;
@@ -92,4 +91,12 @@ input[type="submit"] {
   margin: var(--default-margin) 0;
   font-weight: bold;
 }
+
+/* FOOTER */
+
+footer {
+  padding: var(--default-margin);
+}
+
+
 
